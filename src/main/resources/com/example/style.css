@@ -167,10 +167,6 @@
 }
 
 
-
-
-
-
 .circular-image {
     -fx-background-radius: 50%;
     -fx-border-radius: 50%;
@@ -179,3 +175,39 @@
 
 
 
+
+.button-sign-in {
+    -fx-background-color: #ffffff;    /* Dark black background */
+    -fx-background-radius: 25px;       /* Rounded corners for a pill shape */
+    -fx-text-fill: rgb(0, 0, 0);              /* White text color */
+    -fx-font-size: 14px;               /* Smaller font size */
+    -fx-font-weight: bold;             /* Bold text */
+    -fx-padding: 6 16;                 /* Reduced padding to make the button smaller */
+    -fx-border: none;                  /* Remove any default border */
+    -fx-cursor: hand;                  /* Cursor turns into hand on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 2); /* Subtle shadow for depth */
+    -fx-alignment: center;             /* Center the text within the button */
+}
+
+.button-sign-in:hover {
+    -fx-background-color: #dddddd;    /* Slightly lighter black on hover */
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.3), 7, 0, 0, 3); /* Darker shadow on hover */
+}
+
+.button-sign-in:pressed {
+    -fx-background-color: #555555;    /* Even lighter black when the button is pressed */
+    -fx-effect: none;                 /* Remove the shadow when pressed */
+}
+
+.button-sign-in .icon {
+    -fx-padding: 0 8px 0 0;            /* Reduced padding for icon */
+    -fx-alignment: center-right;       /* Align icon to the right inside the button */
+}
+
+
+
+.circular-image {
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-effect: dropshadow(gaussian, gray, 5, 0, 0, 0);
+}
