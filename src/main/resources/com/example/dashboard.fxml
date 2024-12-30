@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="661.0" prefWidth="1136.0" styleClass="parent" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="600.0" prefWidth="49.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIcon glyphName="BARS" layoutX="33.0" layoutY="40.0" size="1.5em" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0" />
+            <VBox layoutX="15.0" layoutY="211.0">
+               <children>
+                  <FontAwesomeIcon fill="#1b27ff" glyphName="HOME" size="1.5em" />
+                  <FontAwesomeIcon glyphName="LIST_UL" size="1.5em" styleClass="sidebar_opt">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </FontAwesomeIcon>
+                  <FontAwesomeIcon glyphName="IMAGE" size="1.5em" styleClass="sidebar_opt">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </FontAwesomeIcon>
+                  <FontAwesomeIcon glyphName="GEAR" size="1.5em" styleClass="sidebar_opt">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </FontAwesomeIcon>
+                  <Separator>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <FontAwesomeIcon glyphName="PLUS" size="1.5em" />
+               </children>
+            </VBox>
+            <Circle fill="WHITE" layoutX="24.0" layoutY="612.0" radius="17.0" stroke="#767676" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="644.0" prefWidth="1028.0" style="-fx-background-color: #f3f3f3;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="40.0" layoutY="-0.19999999999999996" prefHeight="250.0" prefWidth="914.0" styleClass="pane" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="-0.19999999999999996">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Dashboard" textFill="#1b27ff">
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Separator orientation="VERTICAL">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <Label text="Hello Mate, Welcom Back!">
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" text="16:56 30 December 2024" textFill="#7b7b7b" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox prefHeight="150.0" prefWidth="300.0" styleClass="cards">
+                           <children>
+                              <Label text="45">
+                                 <font>
+                                    <Font name="Arial" size="59.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Total Rooms">
+                                 <font>
+                                    <Font name="Calibri" size="22.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="35.0" />
+                           </padding>
+                        </VBox>
+                        <VBox prefHeight="166.0" prefWidth="300.0" styleClass="cards">
+                           <children>
+                              <Label text="45">
+                                 <font>
+                                    <Font name="Calibri Bold" size="59.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Total Rooms">
+                                 <font>
+                                    <Font name="Calibri" size="27.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="35.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="30.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="166.0" prefWidth="300.0" styleClass="cards">
+                           <children>
+                              <Label text="45">
+                                 <font>
+                                    <Font name="Calibri Bold" size="59.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Total Rooms">
+                                 <font>
+                                    <Font name="Calibri" size="27.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="35.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="30.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

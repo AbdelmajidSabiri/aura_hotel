@@ -211,3 +211,38 @@
     -fx-border-radius: 50%;
     -fx-effect: dropshadow(gaussian, gray, 5, 0, 0, 0);
 }
+
+
+
+
+.parent{
+    -fx-background-color : #FFFFFF;
+    -fx-background-radius : 30px;
+    -fx-padding:0px ;
+}
+
+.sidebar{
+    -fx-background-color : #FFFFFF;
+    -fx-background-radius : 30px 30px 0px 0px ;
+
+}
+
+.sidebar_opt{
+    -fx-fill : #c1c1c1;
+}
+
+
+.pane{
+    -fx-background-color : #FFFFFF;
+    -fx-border-color : #c1c1c1;
+    -fx-background-radius : 0px 0px 30px 30px;
+    -fx-border-radius : 0px 0px 30px 30px;
+}
+
+
+.cards{
+    -fx-background-color : #fbe14f;
+    -fx-border-color : #c1c1c1;
+    -fx-background-radius : 10px 10px 10px 10px;
+    -fx-border-radius : 10px 10px 10px 10px;
+}
