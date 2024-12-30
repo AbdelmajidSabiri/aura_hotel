@@ -1,11 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <right>
-      <VBox prefWidth="332.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="500.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="background" fitHeight="477.0" fitWidth="385.0" layoutX="-9.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.4444580078125" AnchorPane.rightAnchor="14.399999999999977">
+               <image>
+                  <Image url="@images/home1.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="30.0" layoutY="70.0" prefHeight="76.0" prefWidth="168.0" style="-fx-background-color: white; -fx-border-radius: 20px;" styleClass="box-invite" stylesheets="@style.css">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Pane layoutX="95.0" layoutY="8.0" styleClass="box-invite" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true" styleClass="minihotel">
+                           <image>
+                              <Image url="@images/minihotel.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Button layoutX="14.0" layoutY="39.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="26.0" styleClass="explore" stylesheets="@style.css">
+                     <graphic>
+                        <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/right-up.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fill="#2e2c2c" fontSmoothingType="LCD" layoutX="9.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atlas Hotel, Essaouira" wrappingWidth="84.94525146484375">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
    </right>
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="430.0" styleClass="left-pane" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="69.0" prefWidth="478.0">
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="73.0" layoutX="34.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="343.0" layoutY="17.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="110.0" styleClass="button-reserve" stylesheets="@style.css" text="Reserve" />
+               </children>
+            </Pane>
+            <Text layoutX="37.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reserve Your Room For an Ideal Holiday" wrappingWidth="223.49676513671875">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Text>
+            <Pane layoutX="255.0" layoutY="64.0" prefHeight="136.0" prefWidth="164.0" styleClass="mini-images-pane">
+               <children>
+                  <ImageView fx:id="profileImage2" fitHeight="37.0" fitWidth="51.0" layoutX="13.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" styleClass="circular-image" translateX="1.0">
+                     <image>
+                        <Image url="@images/profile1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="45.0" fitWidth="50.0" layoutX="89.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/profile2.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="54.0" fitWidth="46.0" layoutX="75.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/profile3.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Text layoutX="54.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We specialize in curating exceptional villa rentals, providing an unparalleled level of comfort, privacy, and convenience for your dream vacation" wrappingWidth="272.3258056640625">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Text>
+            <Text layoutX="29.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Let's get acquainted!" wrappingWidth="132.35116577148438">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="165.0" layoutY="224.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="                                                                                        " />
+            <Button layoutX="337.0" layoutY="250.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="86.0" styleClass="button-explore" stylesheets="@style.css" text="Explore">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Pane layoutX="73.0" layoutY="303.0" prefHeight="174.0" prefWidth="306.0">
+               <children>
+                  <ImageView fitHeight="172.0" fitWidth="319.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/atlad.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </left>
 </BorderPane>
