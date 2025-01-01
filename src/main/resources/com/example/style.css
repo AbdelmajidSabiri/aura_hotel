@@ -304,3 +304,142 @@
     -fx-background-radius : 30px 30px 30px 30px;
     -fx-border-radius : 30px 30px 30px 30px;
 }
+
+
+
+
+/* Style the TableView */
+.table-view {
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-radius: 10px; /* Rounded border */
+    -fx-background-radius: 10px; /* Rounded background */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0.5, 0, 2);
+    -fx-padding: 10;
+}
+
+/* Style the TableView headers */
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #e3e3e3, #cfcfcf);
+    -fx-border-color: #b0b0b0;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* Style the rows */
+.table-view .table-row-cell {
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-background-color: #ffffff;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f2f2f2; /* Alternating row color */
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #dae7f3;
+}
+
+/* Style the selected row */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: #ffffff;
+}
+
+/* Style the table cell text */
+.table-view .cell {
+    -fx-font-size: 13px;
+    -fx-text-fill: #444;
+    -fx-padding: 8;
+}
+
+/* Add a subtle hover effect for table cells */
+.table-view .cell:hover {
+    -fx-background-color: rgba(74, 144, 226, 0.1);
+}
+
+/* Scrollbar styles */
+.scroll-bar:vertical .increment-button, .scroll-bar:vertical .decrement-button {
+    -fx-background-color: #e0e0e0;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 4; /* Rounded scrollbar track */
+
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #cccccc;
+    -fx-background-insets: 2;
+    -fx-background-radius: 4;
+    
+}
+
+
+/* General Button Styles */
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+/* Add Reservation Button */
+.btn-add {
+    -fx-background-color: #4caf50; /* Green */
+    -fx-text-fill: white;
+}
+
+.btn-add:hover {
+    -fx-background-color: #45a049; /* Darker Green */
+}
+
+/* Edit Reservation Button */
+.btn-edit {
+    -fx-background-color: #2196f3; /* Blue */
+    -fx-text-fill: white;
+}
+
+.btn-edit:hover {
+    -fx-background-color: #1e88e5; /* Darker Blue */
+}
+
+/* Delete Reservation Button */
+.btn-delete {
+    -fx-background-color: #f44336; /* Red */
+    -fx-text-fill: white;
+}
+
+.btn-delete:hover {
+    -fx-background-color: #e53935; /* Darker Red */
+}
+
+/* Refresh Table Button */
+.btn-refresh {
+    -fx-background-color: #ff9800; /* Orange */
+    -fx-text-fill: white;
+}
+
+.btn-refresh:hover {
+    -fx-background-color: #fb8c00; /* Darker Orange */
+}
+
+/* Export to CSV Button */
+.btn-export {
+    -fx-background-color: #9c27b0; /* Purple */
+    -fx-text-fill: white;
+}
+
+.btn-export:hover {
+    -fx-background-color: #8e24aa; /* Darker Purple */
+}
