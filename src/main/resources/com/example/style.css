@@ -240,9 +240,67 @@
 }
 
 
-.cards{
+.card1{
     -fx-background-color : #fbe14f;
     -fx-border-color : #c1c1c1;
     -fx-background-radius : 10px 10px 10px 10px;
     -fx-border-radius : 10px 10px 10px 10px;
+}
+
+.card2{
+    -fx-background-color : #19fa8d;
+    -fx-border-color : #c1c1c1;
+    -fx-background-radius : 10px 10px 10px 10px;
+    -fx-border-radius : 10px 10px 10px 10px;
+}
+
+.card3{
+    -fx-background-color : #fb4f71;
+    -fx-border-color : #c1c1c1;
+    -fx-background-radius : 10px 10px 10px 10px;
+    -fx-border-radius : 10px 10px 10px 10px;
+}
+
+
+.card-1{
+    -fx-background-color : rgba(0,162,211,0.3);
+}
+
+.card-2{
+    -fx-background-color : rgba(68, 210, 201, 0.3);
+}
+
+.card-3{
+    -fx-background-color : rgba(248, 177, 63, 0.3);
+}
+
+.round-box{
+    -fx-background-radius : 100%;
+    -fx-border-radius : 100%;
+    -fx-border-width:5px;
+}
+
+
+
+
+
+
+/* style.css */
+.sidebar_opt {
+    -fx-fill: grey;
+}
+
+.sidebar_opt_active {
+    -fx-fill: #1b27ff; /* Blue color */
+}
+
+
+
+
+
+.pane-table{
+    -fx-background-color : #FFFFFF;
+    -fx-border-color : #c1c1c1;
+    -fx-background-radius : 30px 30px 30px 30px;
+    -fx-border-radius : 30px 30px 30px 30px;
 }

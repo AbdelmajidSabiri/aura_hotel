@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.ProgressIndicator?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -7,30 +8,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="661.0" prefWidth="1136.0" styleClass="parent" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="661.0" prefWidth="1136.0" styleClass="parent" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dashboardController">
    <left>
       <AnchorPane prefHeight="600.0" prefWidth="49.0" styleClass="sidebar" BorderPane.alignment="CENTER">
          <children>
             <FontAwesomeIcon glyphName="BARS" layoutX="33.0" layoutY="40.0" size="1.5em" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0" />
             <VBox layoutX="15.0" layoutY="211.0">
                <children>
-                  <FontAwesomeIcon fill="#1b27ff" glyphName="HOME" size="1.5em" />
-                  <FontAwesomeIcon glyphName="LIST_UL" size="1.5em" styleClass="sidebar_opt">
+                  <FontAwesomeIcon fx:id="homeIcon" fill="#1b27ff" glyphName="HOME" size="1.5em" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited"/>
+                  <FontAwesomeIcon fx:id="listIcon" glyphName="LIST_UL" size="1.5em" styleClass="sidebar_opt" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited">
                      <VBox.margin>
                         <Insets top="15.0" />
                      </VBox.margin>
                   </FontAwesomeIcon>
-                  <FontAwesomeIcon glyphName="IMAGE" size="1.5em" styleClass="sidebar_opt">
+                  <FontAwesomeIcon fx:id="imageIcon" glyphName="IMAGE" size="1.5em" styleClass="sidebar_opt" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited">
                      <VBox.margin>
                         <Insets top="15.0" />
                      </VBox.margin>
                   </FontAwesomeIcon>
-                  <FontAwesomeIcon glyphName="GEAR" size="1.5em" styleClass="sidebar_opt">
+                  <FontAwesomeIcon fx:id="settingsIcon" glyphName="GEAR" size="1.5em" styleClass="sidebar_opt" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited">
                      <VBox.margin>
                         <Insets top="15.0" />
                      </VBox.margin>
@@ -40,7 +41,7 @@
                         <Insets bottom="15.0" top="15.0" />
                      </VBox.margin>
                   </Separator>
-                  <FontAwesomeIcon glyphName="PLUS" size="1.5em" />
+                  <FontAwesomeIcon fx:id="plusIcon" glyphName="PLUS" size="1.5em" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited"/>
                </children>
             </VBox>
             <Circle fill="WHITE" layoutX="24.0" layoutY="612.0" radius="17.0" stroke="#767676" strokeType="INSIDE" />
@@ -90,11 +91,11 @@
                         <Insets bottom="30.0" />
                      </VBox.margin>
                      <children>
-                        <VBox prefHeight="150.0" prefWidth="300.0" styleClass="cards">
+                        <VBox prefHeight="150.0" prefWidth="300.0" styleClass="card1">
                            <children>
-                              <Label text="45">
+                              <Label text="65">
                                  <font>
-                                    <Font name="Arial" size="59.0" />
+                                    <Font name="Arial" size="51.0" />
                                  </font>
                                  <VBox.margin>
                                     <Insets top="20.0" />
@@ -116,62 +117,156 @@
                               <Insets left="35.0" />
                            </padding>
                         </VBox>
-                        <VBox prefHeight="166.0" prefWidth="300.0" styleClass="cards">
-                           <children>
-                              <Label text="45">
-                                 <font>
-                                    <Font name="Calibri Bold" size="59.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets top="20.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label text="Total Rooms">
-                                 <font>
-                                    <Font name="Calibri" size="27.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets top="6.0" />
-                                 </VBox.margin>
-                              </Label>
-                           </children>
+                        <VBox prefHeight="166.0" prefWidth="300.0" styleClass="card2">
                            <padding>
                               <Insets left="35.0" />
                            </padding>
                            <HBox.margin>
                               <Insets bottom="10.0" left="30.0" top="10.0" />
                            </HBox.margin>
+                           <children>
+                              <Label text="17">
+                                 <font>
+                                    <Font name="Arial" size="51.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Available Rooms">
+                                 <font>
+                                    <Font name="Calibri" size="22.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
                         </VBox>
-                        <VBox prefHeight="166.0" prefWidth="300.0" styleClass="cards">
-                           <children>
-                              <Label text="45">
-                                 <font>
-                                    <Font name="Calibri Bold" size="59.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets top="20.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label text="Total Rooms">
-                                 <font>
-                                    <Font name="Calibri" size="27.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets top="6.0" />
-                                 </VBox.margin>
-                              </Label>
-                           </children>
+                        <VBox prefHeight="166.0" prefWidth="300.0" styleClass="card3">
                            <padding>
                               <Insets left="35.0" />
                            </padding>
                            <HBox.margin>
                               <Insets bottom="10.0" left="30.0" top="10.0" />
                            </HBox.margin>
+                           <children>
+                              <Label text="28">
+                                 <font>
+                                    <Font name="Arial" size="51.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Pending Bookings">
+                                 <font>
+                                    <Font name="Calibri" size="22.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
                         </VBox>
                      </children>
                   </HBox>
                </children>
             </VBox>
+            <HBox layoutX="38.0" layoutY="287.0" prefHeight="346.0" prefWidth="1007.0" styleClass="pane">
+               <children>
+                  <VBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="345.0" prefWidth="340.0" style="-fx-background-color: #a4e2fc;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Pane prefHeight="60.0" prefWidth="290.0" style="-fx-background-color: #72D3FE;">
+                           <children>
+                              <Label layoutX="82.0" layoutY="13.0" text="Room Occupancy">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="167.0" prefWidth="171.0" style="-fx-border-color: #72D3FE;" styleClass="round-box">
+                           <VBox.margin>
+                              <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
+                           </VBox.margin>
+                           <children>
+                              <ProgressIndicator prefHeight="64.0" prefWidth="64.0" progress="0.76" radius="60.0" />
+                           </children>
+                        </HBox>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="254.0" style="-fx-background-color: #72D3FE;">
+                           <children>
+                              <Label layoutX="147.0" layoutY="12.0" text="76%">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="11.0" layoutY="11.0" maxWidth="1.7976931348623157E308" prefHeight="345.0" prefWidth="340.0" styleClass="card-3" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Pane prefHeight="60.0" prefWidth="290.0" style="-fx-background-color: #FFC65C;">
+                           <children>
+                              <Label layoutX="67.0" layoutY="16.0" text="Booking Confirmation">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="167.0" prefWidth="171.0" style="-fx-border-color: #72D3FE;" styleClass="round-box">
+                           <VBox.margin>
+                              <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
+                           </VBox.margin>
+                           <children>
+                              <ProgressIndicator prefHeight="64.0" prefWidth="64.0" progress="0.67" radius="60.0" />
+                           </children>
+                        </HBox>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="254.0" style="-fx-background-color: #FFC65C;">
+                           <children>
+                              <Label layoutX="143.0" layoutY="13.0" text="67%">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="241.0" layoutY="11.0" maxWidth="1.7976931348623157E308" prefHeight="345.0" prefWidth="340.0" styleClass="card-2" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Pane prefHeight="60.0" prefWidth="290.0" style="-fx-background-color: #45B7AF;">
+                           <children>
+                              <Label layoutX="53.0" layoutY="12.0" text="Revenue Target Progress">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="167.0" prefWidth="171.0" style="-fx-border-color: #72D3FE;" styleClass="round-box">
+                           <VBox.margin>
+                              <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
+                           </VBox.margin>
+                           <children>
+                              <ProgressIndicator prefHeight="64.0" prefWidth="64.0" progress="0.43" radius="60.0" />
+                           </children>
+                        </HBox>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="254.0" style="-fx-background-color: #45B7AF;">
+                           <children>
+                              <Label alignment="CENTER" layoutX="147.0" layoutY="14.0" text="43%">
+                                 <font>
+                                    <Font name="System Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
    </center>
