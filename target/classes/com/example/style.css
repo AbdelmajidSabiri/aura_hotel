@@ -449,3 +449,55 @@
 .btn-export:hover {
     -fx-background-color: #8e24aa; /* Darker Purple */
 }
+
+
+
+
+
+
+
+
+
+
+.input-field {
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-background-color: white;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 5px;
+}
+
+.input-field:focused {
+    -fx-border-color: #4CAF50; /* Green border when focused */
+}
+
+.btn-save {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+}
+
+.btn-save:hover {
+    -fx-background-color: #45a049; /* Darker green on hover */
+}
+
+.btn-cancel {
+    -fx-background-color: #e74c3c; /* Red */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+}
+
+.btn-cancel:hover {
+    -fx-background-color: #c0392b; /* Darker red on hover */
+}
+
+HBox {
+    -fx-padding: 10px;
+    -fx-alignment: center-right;
+}

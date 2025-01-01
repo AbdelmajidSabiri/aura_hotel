@@ -1,16 +1,23 @@
 package com.example;
 
+import java.io.IOException;
 import java.util.List;
 import com.example.Database.RoomsDAO;
 import com.example.Models.Room;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.application.Platform;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+
 
 public class ReserveListController {
 
@@ -23,25 +30,24 @@ public class ReserveListController {
     @FXML private TableColumn<Room, String> colStatus;
     
     private final ObservableList<Room> roomList = FXCollections.observableArrayList();
+    private final RoomsDAO roomsDAO = new RoomsDAO();
 
     @FXML private Button addButton;
-    @FXML private Button editButton;
-    @FXML private Button deleteButton;
-    @FXML private Button refreshButton;
-    @FXML private Button exportButton;
+    // @FXML private Button editButton;
+    // @FXML private Button deleteButton;
+    // @FXML private Button refreshButton;
+    // @FXML private Button exportButton;
 
     @FXML
     public void initialize() {
         try {
             System.out.println("Initializing ReserveListController...");
             
-            // Check if all FXML elements are properly injected
             if (tableView == null || colRoomNum == null || colPrice == null || 
                 colType == null || colCategory == null || colAmenities == null || colStatus == null) {
                 throw new RuntimeException("FXML components not properly injected!");
             }
 
-            // Set up the columns using PropertyValueFactory
             colRoomNum.setCellValueFactory(new PropertyValueFactory<>("roomNum"));
             colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
             colType.setCellValueFactory(new PropertyValueFactory<>("type"));
@@ -58,11 +64,23 @@ public class ReserveListController {
             // Load the initial data
             loadRooms();
             
+            addButton.setOnAction(event -> handleAddReservation());
+            // editButton.setOnAction(event -> handleEditReservation());
+            // deleteButton.setOnAction(event -> handleDeleteReservation());
+            // refreshButton.setOnAction(event -> refreshTable());
+            // exportButton.setOnAction(event -> handleExportToCsv());
+
+
+
+
+
             System.out.println("Controller initialization completed.");
         } catch (Exception e) {
             System.err.println("Error during controller initialization: " + e.getMessage());
             e.printStackTrace();
         }
+
+        
     }
 
     private void loadRooms() {
@@ -103,8 +121,33 @@ public class ReserveListController {
     }
 
 
+    @FXML
+    private void handleAddReservation() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/AddReservation.fxml"));
+            Parent root = loader.load();
+            
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Add New Reservation");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.initOwner(tableView.getScene().getWindow());
+            
+            Scene scene = new Scene(root);
+            dialogStage.setScene(scene);
+            
+            AddReservationController controller = loader.getController();
+            controller.setDialogStage(dialogStage);
+            
+            // Show dialog and wait for user response
+            dialogStage.showAndWait();
+            
+            // Refresh table after dialog is closed
+            refreshTable();
+        } catch (IOException e) {
+            e.printStackTrace(); 
+        }
+    }
 
     
-
 
 }

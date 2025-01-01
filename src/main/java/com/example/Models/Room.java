@@ -33,8 +33,9 @@ public class Room {
     public IntegerProperty roomNumProperty() {
         return roomNum;
     }
-
-
+    public void setRoomNum(int roomNum) {
+        this.roomNum.set(roomNum);
+    }
 
     public double getPrice() {
         return price.get();
@@ -42,8 +43,9 @@ public class Room {
     public DoubleProperty priceProperty() {
         return price;
     }
-
-
+    public void setPrice(double price) {
+        this.price.set(price);
+    }
 
     public String getType() {
         return type.get();
@@ -51,8 +53,9 @@ public class Room {
     public StringProperty typeProperty() {
         return type;
     }
-
-
+    public void setType(String type) {
+        this.type.set(type);
+    }
 
     public String getCategory() {
         return category.get();
@@ -60,8 +63,9 @@ public class Room {
     public StringProperty categoryProperty() {
         return category;
     }
-
-
+    public void setCategory(String category) {
+        this.category.set(category);
+    }
 
     public String getAmenities() {
         return amenities.get();
@@ -69,13 +73,17 @@ public class Room {
     public StringProperty amenitiesProperty() {
         return amenities;
     }
-
-
+    public void setAmenities(String amenities) {
+        this.amenities.set(amenities);
+    }
 
     public String getStatus() {
         return status.get();
     }
     public StringProperty statusProperty() {
         return status;
+    }
+    public void setStatus(String status) {
+        this.status.set(status);
     }
 }

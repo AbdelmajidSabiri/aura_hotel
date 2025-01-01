@@ -66,4 +66,24 @@ public class RoomsDAO {
         }
         return rooms;
     }
+
+    public void addRoom(Room room) {
+        try {
+            Document doc = new Document()
+                    .append("room_num", room.getRoomNum())
+                    .append("price", room.getPrice())
+                    .append("type", room.getType())
+                    .append("category", room.getCategory())
+                    .append("amenities", room.getAmenities())
+                    .append("status", room.getStatus());
+
+            collection.insertOne(doc);
+            System.out.println("Room added to the database: " + doc.toJson());
+        } catch (Exception e) {
+            System.err.println("Error adding room: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+
 }
