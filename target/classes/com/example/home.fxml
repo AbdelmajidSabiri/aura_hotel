@@ -1,11 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <right>
-      <VBox prefWidth="332.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="500.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="background" fitHeight="806.0" fitWidth="725.0" layoutX="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-4.0" AnchorPane.rightAnchor="-2.0">
+               <image>
+                  <Image url="@images/home1.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="57.0" layoutY="79.0" prefHeight="89.0" prefWidth="193.0" style="-fx-background-color: white; -fx-border-radius: 20px;" styleClass="box-invite" stylesheets="@style.css">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Pane layoutX="106.0" layoutY="8.0" styleClass="box-invite" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="73.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true" styleClass="minihotel">
+                           <image>
+                              <Image url="@images/minihotel.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Button layoutX="14.0" layoutY="39.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="26.0" styleClass="explore" stylesheets="@style.css" />
+                  <Text fill="#2e2c2c" fontSmoothingType="LCD" layoutX="9.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atlas Hotel, Essaouira" wrappingWidth="84.94525146484375">
+                     <font>
+                        <Font name="Arial Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="33.0" layoutX="13.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/right-up.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Text fill="WHITE" layoutX="30.0" layoutY="689.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enjoy a luxurious Melbourne vacation in a villa with breathtaking city views and easy access to the vibrant city life and culinary delights." wrappingWidth="367.5530700683594">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Button layoutX="453.0" layoutY="680.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="126.0" styleClass="button-sign-in" stylesheets="@style.css" text="Explore" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button layoutX="468.0" layoutY="21.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="155.0" styleClass="button-sign-in" stylesheets="@style.css" text="Sign in" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
    </right>
+   <left>
+      <AnchorPane prefHeight="627.0" prefWidth="598.0" styleClass="left-pane" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="-35.0" prefHeight="70.0" prefWidth="653.0">
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="73.0" layoutX="72.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="493.0" layoutY="17.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="110.0" styleClass="button-reserve" stylesheets="@style.css" text="Reserve" />
+               </children>
+            </Pane>
+            <Text layoutX="41.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reserve Your Room For an Ideal Holiday" wrappingWidth="331.49676513671875">
+               <font>
+                  <Font name="Arial Bold" size="43.0" />
+               </font>
+            </Text>
+            <Pane layoutX="368.0" layoutY="81.0" prefHeight="154.0" prefWidth="190.0" styleClass="mini-images-pane">
+               <children>
+                  <ImageView fx:id="profileImage2" fitHeight="59.0" fitWidth="69.0" layoutX="13.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" styleClass="circular-image" translateX="1.0">
+                     <image>
+                        <Image url="@images/profile1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="72.0" fitWidth="82.0" layoutX="98.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/profile2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="53.0" fitWidth="57.0" layoutX="75.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/profile3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Text layoutX="47.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We specialize in curating exceptional villa rentals, providing an unparalleled level of comfort, privacy, and convenience for your dream vacation" wrappingWidth="245.92578125">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Text>
+            <Text layoutX="38.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Let's get acquainted!" wrappingWidth="132.35116577148438">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="174.0" layoutY="282.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="                                                                                                                           " />
+            <Button layoutX="352.0" layoutY="312.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="86.0" styleClass="button-explore" stylesheets="@style.css" text="Explore">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Text layoutX="48.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="115k+" wrappingWidth="111.0859375">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="237.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="72k+" wrappingWidth="111.0859375">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="419.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="36k+" wrappingWidth="111.0859375">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="55.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Capital Raised " />
+            <Text layoutX="229.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Happy Customers" />
+            <Text layoutX="414.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Property Options" />
+            <Text layoutX="357.0" layoutY="433.0" rotate="90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="    ">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="175.0" layoutY="433.0" rotate="90.0" strikethrough="true" strokeType="OUTSIDE" strokeWidth="0.0" text="    ">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Pane layoutX="33.0" layoutY="476.0" prefHeight="302.0" prefWidth="546.0">
+               <children>
+                  <ImageView fitHeight="301.0" fitWidth="587.0" layoutX="-20.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/atlas1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </left>
 </BorderPane>

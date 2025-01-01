@@ -66,3 +66,241 @@
 .search-button:hover {
     -fx-background-color: #333333;
 }
+
+.box-invite{
+    -fx-border-radius: 15px;         /* Rounded corners for the border */
+    -fx-background-radius: 15px;     /* Rounded corners for the background */
+    -fx-background-color: #ffffff;  /* White background */
+    -fx-padding: 0; 
+
+}
+
+.explore {
+    -fx-background-color: transparent;  /* No background color */
+    -fx-background-radius: 50%;          /* Make the button circular */
+    -fx-border: none;                   /* Remove any borders */
+    -fx-pref-width: 30px;               /* Set a fixed width for the button */
+    -fx-pref-height: 30px;              /* Set a fixed height for the button */
+    -fx-alignment: center;               /* Center the image inside the button */
+    -fx-padding: 0;                      /* Remove padding */
+}
+
+.explore > ImageView {
+    -fx-fit-width: 30px;                 /* Size the image to fit inside the button */
+    -fx-fit-height: 30px;                /* Size the image to fit inside the button */
+    -fx-preserve-ratio: true;            /* Maintain the aspect ratio */
+    -fx-clip-radius: 50%;                /* Clip the image into a circle */
+}
+
+.left-pane{
+    -fx-background-color: white;  /* White background */
+
+}
+
+.right-pane{
+    -fx-background-color: white;  /* White background */
+    -fx-background-radius: 50%;          /* Make the button circular */
+
+}
+
+.right-pane > ImageView{
+    
+}
+
+.button-reserve {
+    -fx-background-color: #333333;    /* Dark black background */
+    -fx-background-radius: 30px;       /* Rounded corners for a pill shape */
+    -fx-text-fill: white;              /* White text color */
+    -fx-font-size: 14px;               /* Smaller font size */
+    -fx-font-weight: bold;             /* Bold text */
+    -fx-padding: 8 16;                 /* Reduced padding to make the button smaller */
+    -fx-border: none;                  /* Remove any default border */
+    -fx-cursor: hand;                  /* Cursor turns into hand on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 2); /* Subtle shadow for depth */
+    -fx-alignment: center;             /* Center the text within the button */
+}
+
+.button-reserve:hover {
+    -fx-background-color: #444444;    /* Slightly lighter black on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 7, 0, 0, 3); /* Darker shadow on hover */
+}
+
+.button-reserve:pressed {
+    -fx-background-color: #555555;    /* Even lighter black when the button is pressed */
+    -fx-effect: none;                 /* Remove the shadow when pressed */
+}
+
+.button-reserve .icon {
+    -fx-padding: 0 8px 0 0;            /* Reduced padding for icon */
+    -fx-alignment: center-right;       /* Align icon to the right inside the button */
+}
+
+
+
+
+.button-explore {
+    -fx-background-color: #333333;    /* Dark black background */
+    -fx-background-radius: 30px;       /* Rounded corners for a pill shape */
+    -fx-text-fill: white;              /* White text color */
+    -fx-font-size: 12px;               /* Smaller font size */
+    -fx-font-weight: bold;             /* Bold text */
+    -fx-padding: 6 16;                 /* Reduced padding to make the button smaller */
+    -fx-border: none;                  /* Remove any default border */
+    -fx-cursor: hand;                  /* Cursor turns into hand on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 2); /* Subtle shadow for depth */
+    -fx-alignment: center;             /* Center the text within the button */
+}
+
+.button-explore:hover {
+    -fx-background-color: #444444;    /* Slightly lighter black on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 7, 0, 0, 3); /* Darker shadow on hover */
+}
+
+.button-explore:pressed {
+    -fx-background-color: #555555;    /* Even lighter black when the button is pressed */
+    -fx-effect: none;                 /* Remove the shadow when pressed */
+}
+
+.button-explore .icon {
+    -fx-padding: 0 8px 0 0;            /* Reduced padding for icon */
+    -fx-alignment: center-right;       /* Align icon to the right inside the button */
+}
+
+
+.circular-image {
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-effect: dropshadow(gaussian, gray, 5, 0, 0, 0);
+}
+
+
+
+
+.button-sign-in {
+    -fx-background-color: #ffffff;    /* Dark black background */
+    -fx-background-radius: 25px;       /* Rounded corners for a pill shape */
+    -fx-text-fill: rgb(0, 0, 0);              /* White text color */
+    -fx-font-size: 14px;               /* Smaller font size */
+    -fx-font-weight: bold;             /* Bold text */
+    -fx-padding: 6 16;                 /* Reduced padding to make the button smaller */
+    -fx-border: none;                  /* Remove any default border */
+    -fx-cursor: hand;                  /* Cursor turns into hand on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 2); /* Subtle shadow for depth */
+    -fx-alignment: center;             /* Center the text within the button */
+}
+
+.button-sign-in:hover {
+    -fx-background-color: #dddddd;    /* Slightly lighter black on hover */
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.3), 7, 0, 0, 3); /* Darker shadow on hover */
+}
+
+.button-sign-in:pressed {
+    -fx-background-color: #555555;    /* Even lighter black when the button is pressed */
+    -fx-effect: none;                 /* Remove the shadow when pressed */
+}
+
+.button-sign-in .icon {
+    -fx-padding: 0 8px 0 0;            /* Reduced padding for icon */
+    -fx-alignment: center-right;       /* Align icon to the right inside the button */
+}
+
+
+
+.circular-image {
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-effect: dropshadow(gaussian, gray, 5, 0, 0, 0);
+}
+
+
+
+
+.parent{
+    -fx-background-color : #FFFFFF;
+    -fx-background-radius : 30px;
+    -fx-padding:0px ;
+}
+
+.sidebar{
+    -fx-background-color : #FFFFFF;
+    -fx-background-radius : 30px 30px 0px 0px ;
+
+}
+
+.sidebar_opt{
+    -fx-fill : #c1c1c1;
+}
+
+
+.pane{
+    -fx-background-color : #FFFFFF;
+    -fx-border-color : #c1c1c1;
+    -fx-background-radius : 0px 0px 30px 30px;
+    -fx-border-radius : 0px 0px 30px 30px;
+}
+
+
+.card1{
+    -fx-background-color : #fbe14f;
+    -fx-border-color : #c1c1c1;
+    -fx-background-radius : 10px 10px 10px 10px;
+    -fx-border-radius : 10px 10px 10px 10px;
+}
+
+.card2{
+    -fx-background-color : #19fa8d;
+    -fx-border-color : #c1c1c1;
+    -fx-background-radius : 10px 10px 10px 10px;
+    -fx-border-radius : 10px 10px 10px 10px;
+}
+
+.card3{
+    -fx-background-color : #fb4f71;
+    -fx-border-color : #c1c1c1;
+    -fx-background-radius : 10px 10px 10px 10px;
+    -fx-border-radius : 10px 10px 10px 10px;
+}
+
+
+.card-1{
+    -fx-background-color : rgba(0,162,211,0.3);
+}
+
+.card-2{
+    -fx-background-color : rgba(68, 210, 201, 0.3);
+}
+
+.card-3{
+    -fx-background-color : rgba(248, 177, 63, 0.3);
+}
+
+.round-box{
+    -fx-background-radius : 100%;
+    -fx-border-radius : 100%;
+    -fx-border-width:5px;
+}
+
+
+
+
+
+
+/* style.css */
+.sidebar_opt {
+    -fx-fill: grey;
+}
+
+.sidebar_opt_active {
+    -fx-fill: #1b27ff; /* Blue color */
+}
+
+
+
+
+
+.pane-table{
+    -fx-background-color : #FFFFFF;
+    -fx-border-color : #c1c1c1;
+    -fx-background-radius : 30px 30px 30px 30px;
+    -fx-border-radius : 30px 30px 30px 30px;
+}
