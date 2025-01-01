@@ -306,7 +306,40 @@
 }
 
 
+.table-view .table-cell {
+    -fx-padding: 5px;
+    -fx-border-color: transparent;
+    -fx-font-size: 13px;
+    -fx-text-fill: black;
+}
 
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-table-cell-border-color: transparent;
+    -fx-text-fill: black; /* Make row text black */
+
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f8f8f8;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #0096c9;
+    -fx-text-fill: white;
+}
+
+.table-view:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 5px;
+}
 
 /* Style the TableView */
 .table-view {
@@ -326,18 +359,7 @@
     -fx-border-width: 0 0 1px 0;
 }
 
-.table-view .column-header .label {
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #333;
-}
 
-/* Style the rows */
-.table-view .table-row-cell {
-    -fx-border-color: transparent;
-    -fx-border-width: 0 0 1px 0;
-    -fx-background-color: #ffffff;
-}
 
 .table-view .table-row-cell:odd {
     -fx-background-color: #f2f2f2; /* Alternating row color */
@@ -353,17 +375,7 @@
     -fx-text-fill: #ffffff;
 }
 
-/* Style the table cell text */
-.table-view .cell {
-    -fx-font-size: 13px;
-    -fx-text-fill: #444;
-    -fx-padding: 8;
-}
 
-/* Add a subtle hover effect for table cells */
-.table-view .cell:hover {
-    -fx-background-color: rgba(74, 144, 226, 0.1);
-}
 
 /* Scrollbar styles */
 .scroll-bar:vertical .increment-button, .scroll-bar:vertical .decrement-button {
@@ -376,12 +388,6 @@
 
 }
 
-.scroll-bar:vertical .thumb {
-    -fx-background-color: #cccccc;
-    -fx-background-insets: 2;
-    -fx-background-radius: 4;
-    
-}
 
 
 /* General Button Styles */

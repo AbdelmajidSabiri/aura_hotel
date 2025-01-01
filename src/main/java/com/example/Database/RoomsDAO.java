@@ -8,50 +8,61 @@ import org.bson.Document;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class RoomsDAO {
-    private MongoCollection<Document> collection;
+    private final MongoCollection<Document> collection;
 
     public RoomsDAO() {
-        MongoDatabase database = MongoDBConnection.getDatabase();
-        this.collection = database.getCollection("Rooms");
+        try {
+            MongoDatabase database = MongoDBConnection.getDatabase();
+            this.collection = database.getCollection("rooms");
+            System.out.println("Successfully connected to MongoDB collection");
+        } catch (Exception e) {
+            System.err.println("Failed to connect to MongoDB: " + e.getMessage());
+            e.printStackTrace();
+            throw e;
+        }
     }
 
-    // Retrieve all rooms
     public List<Room> getAllRooms() {
         List<Room> rooms = new ArrayList<>();
-        try (MongoCursor<Document> cursor = collection.find().iterator()) {
+        try {
+            System.out.println("Attempting to fetch rooms from database...");
+            MongoCursor<Document> cursor = collection.find().iterator();
+            int count = 0;
+            
             while (cursor.hasNext()) {
                 Document doc = cursor.next();
-                Room room = new Room(
-                        doc.getInteger("room_num"),
-                        doc.getList("image", String.class),
-                        doc.getDouble("price"),
-                        doc.getString("type"),
-                        doc.getString("categorie")
-                );
-                rooms.add(room);
-            }
-        }
-        return rooms;
-    }
+                count++;
+                System.out.println("Processing document: " + doc.toJson());
 
-    // Retrieve rooms by category
-    public List<Room> getRoomsByCategory(String category) {
-        List<Room> rooms = new ArrayList<>();
-        Document query = new Document("categorie", category);
-        try (MongoCursor<Document> cursor = collection.find(query).iterator()) {
-            while (cursor.hasNext()) {
-                Document doc = cursor.next();
-                Room room = new Room(
-                        doc.getInteger("room_num"),
-                        doc.getList("image", String.class),
-                        doc.getDouble("price"),
-                        doc.getString("type"),
-                        doc.getString("categorie")
-                );
-                rooms.add(room);
+                Integer roomNum = Optional.ofNullable(doc.getInteger("room_num")).orElse(null);
+                Double price = Optional.ofNullable(doc.getDouble("price")).orElse(null);
+                String type = Optional.ofNullable(doc.getString("type")).orElse(null);
+                String category = Optional.ofNullable(doc.getString("category")).orElse(null);
+                String amenities = Optional.ofNullable(doc.getString("amenities")).orElse("");
+                String status = Optional.ofNullable(doc.getString("status")).orElse(null);
+
+                if (roomNum != null && price != null && type != null && category != null && status != null) {
+                    Room room = new Room(
+                            roomNum,
+                            price,
+                            type,
+                            category,
+                            amenities,
+                            status
+                    );
+                    rooms.add(room);
+                } else {
+                    System.out.println("Skipping document due to null values: " + doc.toJson());
+                }
             }
+            System.out.println("Total documents processed: " + count);
+            System.out.println("Total valid rooms added: " + rooms.size());
+        } catch (Exception e) {
+            System.err.println("Error fetching rooms: " + e.getMessage());
+            e.printStackTrace();
         }
         return rooms;
     }
