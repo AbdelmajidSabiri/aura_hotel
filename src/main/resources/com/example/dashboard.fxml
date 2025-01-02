@@ -20,18 +20,18 @@
             <FontAwesomeIcon glyphName="BARS" layoutX="33.0" layoutY="40.0" size="1.5em" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0" />
             <VBox layoutX="15.0" layoutY="211.0">
                <children>
-                  <FontAwesomeIcon fx:id="homeIcon" fill="#1b27ff" glyphName="HOME" size="1.5em" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited"/>
-                  <FontAwesomeIcon fx:id="listIcon" glyphName="LIST_UL" size="1.5em" styleClass="sidebar_opt" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited">
+                  <FontAwesomeIcon fx:id="homeIcon" fill="#1b27ff" glyphName="HOME" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" size="1.5em" />
+                  <FontAwesomeIcon fx:id="listIcon" glyphName="LIST_UL" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" size="1.5em" styleClass="sidebar_opt">
                      <VBox.margin>
                         <Insets top="15.0" />
                      </VBox.margin>
                   </FontAwesomeIcon>
-                  <FontAwesomeIcon fx:id="imageIcon" glyphName="IMAGE" size="1.5em" styleClass="sidebar_opt" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited">
+                  <FontAwesomeIcon fx:id="imageIcon" glyphName="IMAGE" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" size="1.5em" styleClass="sidebar_opt">
                      <VBox.margin>
                         <Insets top="15.0" />
                      </VBox.margin>
                   </FontAwesomeIcon>
-                  <FontAwesomeIcon fx:id="settingsIcon" glyphName="GEAR" size="1.5em" styleClass="sidebar_opt" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited">
+                  <FontAwesomeIcon fx:id="settingsIcon" glyphName="GEAR" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" size="1.5em" styleClass="sidebar_opt">
                      <VBox.margin>
                         <Insets top="15.0" />
                      </VBox.margin>
@@ -41,10 +41,10 @@
                         <Insets bottom="15.0" top="15.0" />
                      </VBox.margin>
                   </Separator>
-                  <FontAwesomeIcon fx:id="plusIcon" glyphName="PLUS" size="1.5em" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited"/>
+                  <FontAwesomeIcon fx:id="plusIcon" glyphName="PLUS" onMouseClicked="#handleIconClick" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" size="1.5em" />
                </children>
             </VBox>
-            <Circle fill="WHITE" layoutX="24.0" layoutY="612.0" radius="17.0" stroke="#767676" strokeType="INSIDE" />
+            <Circle fill="WHITE" layoutX="24.0" layoutY="632.0" radius="17.0" stroke="#767676" strokeType="INSIDE" />
          </children>
       </AnchorPane>
    </left>
@@ -191,7 +191,7 @@
                               <Insets bottom="30.0" left="10.0" right="10.0" top="30.0" />
                            </VBox.margin>
                            <children>
-                              <ProgressIndicator prefHeight="64.0" prefWidth="64.0" progress="0.76" radius="60.0" />
+                              <ProgressIndicator prefHeight="64.0" prefWidth="64.0" progress="0.76" radius="60.0" stylesheets="@style.css" />
                            </children>
                         </HBox>
                         <Pane layoutX="10.0" layoutY="10.0" prefHeight="60.0" prefWidth="254.0" style="-fx-background-color: #72D3FE;">

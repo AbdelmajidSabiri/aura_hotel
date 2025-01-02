@@ -305,406 +305,194 @@
     -fx-border-radius : 30px 30px 30px 30px;
 }
 
-.label {
-    -fx-font-family: Arial, sans-serif;
-}
 
-.button {
-    -fx-background-color: #0078d7;
-    -fx-text-fill: white;
-    -fx-cursor: hand;
-    -fx-padding: 5px 10px;
-}
-
-.button:hover {
-    -fx-background-color: #005bb5;
-}
-/* General styles for the AnchorPane and VBox */
-.root {
-    -fx-background-color: #f4f4f4;
-}
-
-/* Room Card Style */
-.room-card {
-    -fx-border-color: #f0f0f0;
-    -fx-border-radius: 8px;
-    -fx-padding: 20px;
-    -fx-background-color: white;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0.0, 0, 5);
-    -fx-alignment: center;
-}
-
-/* Image Style */
-.room-image {
-    -fx-border-radius: 8px;
-    -fx-background-color: #e0e0e0; /* Placeholder color if image is not loaded */
-}
-
-/* Room Title */
-.room-title {
-    -fx-font-size: 22px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #333333;
-}
-
-/* Room Description */
-.room-description {
-    -fx-font-size: 14px;
-    -fx-text-fill: #777777;
-}
-
-
-
-/* View Details Button */
-.room-button {
-    -fx-background-color: #3498db;
-    -fx-text-fill: white;
-    -fx-padding: 10px 20px;
-    -fx-font-size: 14px;
-    -fx-border-radius: 5px;
-    -fx-font-weight: bold;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 3, 0.0, 0, 3);
-}
-
-/* Search Box */
-.text-field {
-    -fx-background-color: #f4f4f4;
-    -fx-font-size: 14px;
-    -fx-text-fill: #555555;
-    -fx-padding: 10px;
-}
-
-.main-title {
-    -fx-font-size: 30px;
-    -fx-font-weight: bold;
-}
-
-.category-title {
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-}
-
-.room-card {
-    -fx-background-color: white;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
-    -fx-background-radius: 8;
-}
-
-.room-details {
-    -fx-padding: 10;
-}
-
-.room-title {
-    -fx-font-size: 18px;
-    -fx-font-weight: bold;
-}
-
-.room-description {
-    -fx-text-fill: #666666;
-}
-
-
-.view-button {
-    -fx-background-color: black;
-    -fx-text-fill: white;
-    -fx-padding: 8 16;
-    -fx-background-radius: 4;
-}
-
-.transparent-scroll {
-    -fx-background-color: transparent;
-}
-
-.transparent-scroll .viewport {
-    -fx-background-color: transparent;
-}
-
-.main-title {
-    -fx-font-size: 30px;
-    -fx-font-weight: bold;
-    -fx-padding: 10 0;
-}
-
-.category-title {
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-    -fx-padding: 5 0;
-}
-
-.room-card {
-    -fx-background-color: white;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
-    -fx-background-radius: 8;
-}
-
-.room-details {
-    -fx-padding: 10;
-    -fx-spacing: 5;
-}
-
-.room-title {
-    -fx-font-size: 18px;
-    -fx-font-weight: bold;
-}
-
-.room-description {
-    -fx-text-fill: #666666;
-}
-
-
-
-.view-button {
-    -fx-background-color: black;
-    -fx-text-fill: white;
-    -fx-padding: 8 16;
-    -fx-background-radius: 4;
-}
-
-.transparent-scroll {
-    -fx-background-color: transparent;
-    -fx-fit-to-height: true;
-}
-
-.transparent-scroll .viewport {
-    -fx-background-color: transparent;
-}
-
-.transparent-scroll .scroll-bar:horizontal {
-    -fx-background-color: transparent;
-}
-
-.transparent-scroll .scroll-bar:horizontal .thumb {
-    -fx-background-color: #888888;
-    -fx-background-radius: 4;
-}
-.main-scroll {
-    -fx-background-color: white;
-}
-
-.main-scroll .viewport {
-    -fx-background-color: white;
-}
-
-.main-title {
-    -fx-font-size: 30px;
-    -fx-font-weight: bold;
-    -fx-padding: 0 0 20 0;
-}
-
-.category-title {
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-    -fx-padding: 10 0;
-}
-
-.room-card {
-    -fx-background-color: white;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
-    -fx-background-radius: 8;
-    -fx-padding: 0 0 15 0;
-    -fx-pref-width: 280;
-    -fx-alignment: center;
-    -fx-spacing: 10;
-}
-
-.room-title {
-    -fx-font-size: 18px;
-    -fx-font-weight: bold;
-}
-
-.room-description {
-    -fx-text-fill: #666666;
-}
-
-
-
-.view-button {
-    -fx-background-color: black;
-    -fx-text-fill: white;
-    -fx-padding: 8 24;
-    -fx-background-radius: 4;
-}
-
-.view-button:hover {
-    -fx-background-color: #333333;
-}
-.main-scroll {
-    -fx-background-color: transparent;
-    -fx-padding: 20;
-}
-
-.main-scroll .viewport {
-    -fx-background-color: transparent;
-}
-
-.main-scroll .scroll-bar:horizontal {
-    -fx-background-color: derive(#f0f0f0, 20%);
-    -fx-background-radius: 3;
-}
-
-.main-scroll .scroll-bar:horizontal .thumb {
-    -fx-background-color: derive(#808080, 50%);
-    -fx-background-radius: 3;
-}
-
-.main-title {
-    -fx-font-size: 32px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #2C3E50;
-    -fx-padding: 0 0 20 0;
-}
-
-.category-title {
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #34495E;
-    -fx-padding: 15 0;
-}
-
-.room-card {
-    -fx-background-color: white;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 15, 0, 0, 3);
-    -fx-background-radius: 12;
-    -fx-padding: 0 0 15 0;
-    -fx-pref-width: 280;
-    -fx-alignment: center;
-    -fx-spacing: 8;
-    -fx-border-radius: 12;
+.table-view .table-cell {
+    -fx-padding: 5px;
     -fx-border-color: transparent;
+    -fx-font-size: 13px;
+    -fx-text-fill: black;
 }
 
-.room-card:hover {
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 20, 0, 0, 5);
-    -fx-border-color: #3498DB;
-    -fx-border-width: 2;
-}
-
-.room-card ImageView {
-    -fx-background-radius: 12 12 0 0;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
-}
-
-.room-title {
-    -fx-font-size: 20px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #2C3E50;
-}
-
-.room-description {
-    -fx-font-size: 14px;
-    -fx-text-fill: #7F8C8D;
-}
-
-
-.view-button {
-    -fx-background-color: #3498DB;
-    -fx-text-fill: white;
-    -fx-padding: 10 30;
-    -fx-font-size: 14px;
-    -fx-background-radius: 6;
-    -fx-cursor: hand;
-}
-
-.view-button:hover {
-    -fx-background-color: #2980B9;
-}
-
-.view-button:pressed {
-    -fx-background-color: #2472A4;
-}
-/* General Styles */
-.root {
-    -fx-font-family: "Arial";
-    -fx-font-size: 14px;
-    -fx-background-color: #f5f5f5;
-}
-
-.main-scroll {
-    -fx-background-color: transparent;
-}
-
-.main-title {
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #333333;
-    -fx-alignment: center;
-}
-
-.category-title {
-    -fx-font-size: 20px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #2c3e50;
-}
-
-/* Room Cards */
-.room-card {
+.table-row-cell {
     -fx-background-color: white;
-    -fx-border-radius: 10;
-    -fx-padding: 10;
-    -fx-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    -fx-min-width: 280px;
-    -fx-max-width: 280px;
+    -fx-table-cell-border-color: transparent;
+    -fx-text-fill: black; /* Make row text black */
+
 }
 
-.room-card:hover {
-    -fx-background-color: #ecf0f1;
+.table-row-cell:odd {
+    -fx-background-color: #f8f8f8;
 }
 
-.room-title {
-    -fx-font-size: 18px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #2c3e50;
-    -fx-alignment: center;
-    -fx-padding: 5 0;
-}
-
-.room-description {
-    -fx-font-size: 14px;
-    -fx-text-fill: #7f8c8d;
-    -fx-alignment: center;
-    -fx-padding: 0 0 5 0;
-}
-
-.room-price {
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #e74c3c;
-    -fx-alignment: center;
-    -fx-padding: 5 0;
-}
-
-.view-button {
-    -fx-background-color: #3498db;
+.table-row-cell:selected {
+    -fx-background-color: #0096c9;
     -fx-text-fill: white;
+}
+
+.table-view:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 5px;
+}
+
+/* Style the TableView */
+.table-view {
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-radius: 10px; /* Rounded border */
+    -fx-background-radius: 10px; /* Rounded background */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0.5, 0, 2);
+    -fx-padding: 10;
+}
+
+/* Style the TableView headers */
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #e3e3e3, #cfcfcf);
+    -fx-border-color: #b0b0b0;
+    -fx-border-width: 0 0 1px 0;
+}
+
+
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f2f2f2; /* Alternating row color */
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #dae7f3;
+}
+
+/* Style the selected row */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: #ffffff;
+}
+
+
+
+/* Scrollbar styles */
+.scroll-bar:vertical .increment-button, .scroll-bar:vertical .decrement-button {
+    -fx-background-color: #e0e0e0;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 4; /* Rounded scrollbar track */
+
+}
+
+
+
+/* General Button Styles */
+.button {
     -fx-font-size: 14px;
-    -fx-padding: 10 15;
-    -fx-border-radius: 5;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 10 20;
     -fx-cursor: hand;
 }
 
-.view-button:hover {
-    -fx-background-color: #2980b9;
+/* Add Reservation Button */
+.btn-add {
+    -fx-background-color: #4caf50; /* Green */
+    -fx-text-fill: white;
 }
 
-/* Layout Styles */
-.VBox {
-    -fx-padding: 10 20;
-    -fx-spacing: 20;
+.btn-add:hover {
+    -fx-background-color: #45a049; /* Darker Green */
 }
 
-.HBox {
-    -fx-spacing: 20;
+/* Edit Reservation Button */
+.btn-edit {
+    -fx-background-color: #2196f3; /* Blue */
+    -fx-text-fill: white;
 }
 
-.ScrollPane {
-    -fx-background-color: transparent;
+.btn-edit:hover {
+    -fx-background-color: #1e88e5; /* Darker Blue */
 }
 
-.AnchorPane {
-    -fx-background-color: #f5f5f5;
-    -fx-padding: 10;
+/* Delete Reservation Button */
+.btn-delete {
+    -fx-background-color: #f44336; /* Red */
+    -fx-text-fill: white;
 }
 
-.padding {
-    -fx-padding: 20;
+.btn-delete:hover {
+    -fx-background-color: #e53935; /* Darker Red */
+}
+
+/* Refresh Table Button */
+.btn-refresh {
+    -fx-background-color: #ff9800; /* Orange */
+    -fx-text-fill: white;
+}
+
+.btn-refresh:hover {
+    -fx-background-color: #fb8c00; /* Darker Orange */
+}
+
+/* Export to CSV Button */
+.btn-export {
+    -fx-background-color: #9c27b0; /* Purple */
+    -fx-text-fill: white;
+}
+
+.btn-export:hover {
+    -fx-background-color: #8e24aa; /* Darker Purple */
+}
+
+
+
+
+
+
+
+
+
+
+.input-field {
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-background-color: white;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 5px;
+}
+
+.input-field:focused {
+    -fx-border-color: #4CAF50; /* Green border when focused */
+}
+
+.btn-save {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+}
+
+.btn-save:hover {
+    -fx-background-color: #45a049; /* Darker green on hover */
+}
+
+.btn-cancel {
+    -fx-background-color: #e74c3c; /* Red */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+}
+
+.btn-cancel:hover {
+    -fx-background-color: #c0392b; /* Darker red on hover */
 }

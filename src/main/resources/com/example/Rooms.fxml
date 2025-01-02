@@ -6,13 +6,13 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane prefHeight="800.0" prefWidth="922.0" stylesheets="@Rooms.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RoomsController">
-    <ScrollPane hbarPolicy="NEVER" styleClass="main-scroll" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+<StackPane fx:id="somePane" prefHeight="800.0" prefWidth="922.0" stylesheets="@Rooms.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RoomsController">
+    <ScrollPane hbarPolicy="NEVER" styleClass="main-scroll" vbarPolicy="NEVER">
         <VBox spacing="20">
             <padding>
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -20,7 +20,7 @@
 
             <!-- Background Image with Title -->
             <VBox>
-                <AnchorPane>
+                <StackPane>
                     <ImageView fitHeight="310.0" fitWidth="936.0" layoutX="-36.0">
                         <image>
                             <Image url="@images/roomsbackground.jpg" />
@@ -28,11 +28,11 @@
                     </ImageView>
                     
                     <!-- Title Overlay -->
-                    <VBox layoutX="-9.6" prefHeight="66.0" prefWidth="940.0" spacing="10" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+                    <VBox layoutX="-9.6" prefHeight="66.0" prefWidth="940.0" spacing="10">
                         <Label alignment="TOP_LEFT" prefHeight="74.0" prefWidth="387.0" styleClass="main-title" text="  Our Exclusive Rooms" textFill="WHITE" />
                     </VBox>
                     <Label layoutY="46.0" styleClass="main-description" text="Experience luxury and comfort in our specially curated rooms." textFill="WHITE" />
-                </AnchorPane>
+                </StackPane>
             </VBox>
 
             <!-- Single Bed Category -->
@@ -195,4 +195,4 @@
             </VBox>
         </VBox>
     </ScrollPane>
-</AnchorPane>
+</StackPane>
