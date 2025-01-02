@@ -45,6 +45,11 @@ public class dashboardController {
         if (clickedIcon == homeIcon) {
             loadPage("dashboard.fxml"); // Load the reservList page
         }
+
+        if (clickedIcon == settingsIcon) {
+            loadPage("reservations.fxml"); // Load the reservList page
+        }
+
     }
 
     // Reset all icons to grey
@@ -74,7 +79,6 @@ public class dashboardController {
 
     private void loadPage(String fxmlFile) {
         try {
-            // If the new page is dashboard, load it as the entire content of rootPane, not just center
             if (fxmlFile.equals("dashboard.fxml")) {
                 // Check if the current page is already the dashboard
                 if (!currentPage.equals("dashboard.fxml")) {
@@ -84,7 +88,6 @@ public class dashboardController {
                     currentPage = "dashboard.fxml"; // Update the current page
                 }
             } else {
-                // For other pages, set them as the center content of rootPane
                 FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
                 Parent newPage = loader.load();
                 rootPane.setCenter(newPage);  // Set the new page as the center content
