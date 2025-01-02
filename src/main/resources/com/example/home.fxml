@@ -16,11 +16,7 @@
       <AnchorPane prefHeight="500.0" prefWidth="300.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fx:id="background" fitHeight="806.0" fitWidth="725.0" layoutX="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-4.0" AnchorPane.rightAnchor="-2.0">
-               <image>
-                  <Image url="@images/home1.png" />
-               </image>
-            </ImageView>
-            <Pane layoutX="57.0" layoutY="79.0" prefHeight="89.0" prefWidth="193.0" style="-fx-background-color: white; -fx-border-radius: 20px;" styleClass="box-invite" stylesheets="@style.css">
+               <image>a9.0" prefWidth="193.0" style="-fx-background-color: white; -fx-border-radius: 20px;" styleClass="box-invite" stylesheets="@style.css">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

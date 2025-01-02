@@ -1,0 +1,274 @@
+/* General Styles */
+/* Background Image Styling for Header */
+.AnchorPane {
+    -fx-background-image: url('images/roomsbackground.jpg');
+    -fx-background-size: 100% 100%; /* Stretch to cover the entire pane */
+    -fx-background-position: top center; /* Align to top */
+    -fx-background-repeat: no-repeat;
+    -fx-padding: 0; /* Remove padding to eliminate borders */
+    -fx-min-width: 100%; /* Ensure it stretches across the full width */
+    -fx-min-height: 100vh; /* Ensure it covers full height of the viewport */
+}
+
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-base: #ffffff;
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #333;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+/* Main Title and Description */
+.main-title {
+    -fx-font-family: "Playfair Display SC", serif;
+    -fx-font-size: 36px;
+    -fx-font-weight: 600; /* Adjust weight to make it bold */
+    -fx-text-fill: white;
+    -fx-text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -fx-padding: 10 0;
+    -fx-text-align: center;
+}
+
+.main-description {
+    -fx-font-family: "Playfair Display SC", serif;
+    -fx-font-size: 16px;
+    -fx-text-fill: #F1F1F1;
+    -fx-text-align: center;
+    -fx-padding: 10;
+    -fx-font-style: italic;
+}
+
+/* Room Cards */
+.room-card {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-min-width: 280;
+    -fx-min-height: 350;
+    -fx-max-width: 280;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, #ccc, 15, 0, 0, 5);
+    -fx-transition: all 0.3s ease;
+    -fx-margin: 10px;
+    -fx-cursor: pointer;
+}
+
+.room-card:hover {
+    -fx-background-color: #f1f1f1;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Image Styling */
+.room-card .image-view {
+    -fx-fit-height: 200px;
+    -fx-fit-width: 280px;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, #888, 5, 0, 0, 10);
+    -fx-transition: all 0.3s ease;
+}
+
+.room-card .image-view:hover {
+    -fx-opacity: 0.85;
+}
+
+/* Room Title and Description Alignment (Under each other) */
+.room-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-padding: 10 0 0 0;
+    -fx-text-align: center;
+}
+
+.room-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #777;
+    -fx-padding: 5 0 10 0;
+    -fx-text-align: center;
+}
+
+/* Reserve Button (Grey inside borders on hover/press) */
+.reserve-button {
+    -fx-background-color: white;
+    -fx-text-fill: #333;
+    -fx-font-size: 14px;
+    -fx-padding: 12 25;
+    -fx-border-radius: 30;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+    -fx-border-width: 1;
+    -fx-border-color: #ccc;
+}
+
+.reserve-button:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: #666;
+    -fx-border-color: #aaa;
+}
+
+.reserve-button:pressed {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333;
+    -fx-border-color: #888;
+}
+
+/* ScrollPane Customization */
+.category-scroll {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .thumb {
+    -fx-background-color: #5cb85c;
+}
+
+.scroll-pane .track:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .track:horizontal {
+    -fx-background-color: transparent;
+}
+
+/* Buttons Below Cards */
+.hbox .button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+    -fx-font-size: 20px;
+    -fx-text-fill: #5cb85c;
+    -fx-padding: 10;
+}
+
+.hbox .button:hover {
+    -fx-text-fill: #4cae4c;
+}
+
+.hbox .button .graphic {
+    -fx-fill: #5cb85c;
+}
+
+/* Swap Button Icons */
+.font-awesome-icon {
+    -fx-fill: #5cb85c;
+    -fx-font-size: 20px;
+}
+
+/* Swap Buttons - Move slightly right and make transparent */
+.hbox .button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-font-size: 20px;
+    -fx-padding: 12 35;
+    -fx-cursor: hand;
+}
+
+.hbox .button:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: #5cb85c;
+}
+
+/* Space between text and image in room card */
+.room-card .VBox {
+    -fx-spacing: 15px;
+}
+
+/* General Padding and Spacing */
+.root {
+    -fx-padding: 0;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .room-card {
+        -fx-min-width: 100%;
+        -fx-max-width: 100%;
+    }
+
+    .room-card .image-view {
+        -fx-fit-width: 100%;
+    }
+
+    .main-title {
+        -fx-font-size: 28px;
+    }
+
+    .main-description {
+        -fx-font-size: 14px;
+    }
+
+    .category-title {
+        -fx-font-family: 'Playfair Display SC', serif; /* Elegant font */
+        -fx-font-size: 24px; /* Font size for title */
+        -fx-font-weight: bold; /* Bold weight for emphasis */
+        -fx-text-fill: #333; /* Dark gray color */
+        -fx-text-alignment: left; /* Align text to the left */
+        -fx-padding: 10 0; /* Spacing around the title */
+        -fx-position: relative;
+    }
+    
+    .category-title::after {
+        content: ''; /* Empty content for the line */
+        position: absolute; /* Positioned relative to the title */
+        top: 50%; /* Center line vertically */
+        left: 100%; /* Start line after the title */
+        margin-left: 10px; /* Small gap between text and line */
+        width: calc(100% - 150px); /* Line length (adjust to fit layout) */
+        height: 1px; /* Line thickness */
+        background-color: #333; /* Line color */
+    }
+    
+}
+
+.swap-button.transparent {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Apply the font to category titles */
+.category-title {
+    -fx-font-family: 'Playfair Display SC', serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: 400; /* Regular weight */
+    -fx-text-align: center;
+    -fx-text-fill: #333; /* Dark gray color */
+    -fx-position: relative;
+    -fx-margin: 20px 0;
+    -fx-display: inline-block;
+}
+
+.category-title::before,
+.category-title::after {
+    content: ''; /* Empty content for the lines */
+    position: absolute;
+    top: 50%;
+    width: 45%; /* Adjust the length of the lines */
+    height: 1px; /* Line thickness */
+    background-color: #333; /* Line color */
+}
+
+.category-title::before {
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.category-title::after {
+    right: 0;
+    transform: translateY(-50%);
+}
+
+/* Center category title */
+.category-container {
+    -fx-alignment: center; /* Center items */
+    -fx-spacing: 20; /* Space around items */
+    -fx-layout: VBox;
+}

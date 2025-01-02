@@ -1,0 +1,110 @@
+/* General Styling for the Pop-Up */
+.popup-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 30px;
+    -fx-alignment: center;
+    -fx-spacing: 20px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0.5, 0, 5);
+    -fx-min-width: 500px;
+    -fx-min-height: 650px;
+    -fx-max-height: 700px;
+    -fx-overflow: auto;
+}
+
+/* Scrollbar Styling (Custom Scrollbar for Overflow Content) */
+.popup-container {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+.popup-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.popup-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.popup-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Section Title Styling */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 2px 0;
+}
+
+/* Label Styling */
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #555;
+    -fx-padding: 5px 0;
+}
+
+/* Input Fields Styling */
+.text-field, .phone-field, .payment-field {
+    -fx-font-size: 14px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-radius: 5px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-padding: 8px;
+    -fx-focus-color: #2196F3;
+    -fx-pref-width: 350px;
+}
+
+/* Date Picker Styling */
+.date-picker {
+    -fx-font-size: 14px;
+    -fx-pref-width: 200px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-radius: 5px;
+    -fx-border-color: #e0e0e0;
+}
+
+/* Button Styling */
+.confirm-button {
+    -fx-background-color: white; /* White background */
+    -fx-text-fill: #333; /* Dark text color */
+    -fx-padding: 12px 20px;
+    -fx-border-radius: 50px; /* Fully rounded corners */
+    -fx-border-color: #e0e0e0; /* Light gray border */
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+    -fx-transition: all 0.3s ease;
+}
+
+.confirm-button:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: #666;
+    -fx-border-color: #aaa;
+}
+
+.confirm-button:pressed {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333;
+    -fx-border-color: #888;
+}
+
+/* Centering Layout Elements */
+.popup-container > * {
+    -fx-alignment: center;
+}
+
+/* Add Spacing Between Elements */
+.label, .button, .date-picker, .time-picker, .text-field {
+    -fx-margin-bottom: 15px;
+}
+
+

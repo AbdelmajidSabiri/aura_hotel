@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane prefHeight="800.0" prefWidth="922.0" stylesheets="@Rooms.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RoomsController">
+    <ScrollPane hbarPolicy="NEVER" styleClass="main-scroll" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <VBox spacing="20">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+
+            <!-- Background Image with Title -->
+            <VBox>
+                <AnchorPane>
+                    <ImageView fitHeight="310.0" fitWidth="936.0" layoutX="-36.0">
+                        <image>
+                            <Image url="@images/roomsbackground.jpg" />
+                        </image>
+                    </ImageView>
+                    
+                    <!-- Title Overlay -->
+                    <VBox layoutX="-9.6" prefHeight="66.0" prefWidth="940.0" spacing="10" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+                        <Label alignment="TOP_LEFT" prefHeight="74.0" prefWidth="387.0" styleClass="main-title" text="  Our Exclusive Rooms" textFill="WHITE" />
+                    </VBox>
+                    <Label layoutY="46.0" styleClass="main-description" text="Experience luxury and comfort in our specially curated rooms." textFill="WHITE" />
+                </AnchorPane>
+            </VBox>
+
+            <!-- Single Bed Category -->
+            <VBox prefWidth="926.0" spacing="15">
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label styleClass="category-title" text="Single Bed Rooms" />
+                    <Line endX="200.0" startX="0.0" strokeWidth="2.0" style="-fx-stroke: #CCCCCC;" />
+                </HBox>
+                <ScrollPane hbarPolicy="AS_NEEDED" styleClass="category-scroll" vbarPolicy="AS_NEEDED">
+                    <HBox spacing="15">
+                        <!-- Card 1 -->
+                        <VBox styleClass="room-card material-card">
+                            <ImageView fitHeight="200" fitWidth="280">
+                                <image>
+                                    <Image url="@images/home1.png" />
+                                </image>
+                            </ImageView>
+                            <VBox alignment="CENTER" spacing="5">
+                                <Label styleClass="room-title" text="Cozy Single" />
+                                <Label styleClass="room-description" text="City View" />
+                                <Button styleClass="reserve-button" text="Reserve" onAction="#onReserveButtonClicked"/>
+                            </VBox>
+                        </VBox>
+
+                        <!-- Card 2 -->
+                        <VBox styleClass="room-card material-card">
+                            <ImageView fitHeight="200" fitWidth="280">
+                                <image>
+                                    <Image url="@images/home1.png" />
+                                </image>
+                            </ImageView>
+                            <VBox alignment="CENTER" spacing="5">
+                                <Label styleClass="room-title" text="Standard Single" />
+                                <Label styleClass="room-description" text="Garden View" />
+                                <Button styleClass="reserve-button" text="Reserve" onAction="#onReserveButtonClicked"/>
+                            </VBox>
+                        </VBox>
+
+                        <!-- Card 3 -->
+                        <VBox styleClass="room-card material-card">
+                            <ImageView fitHeight="200" fitWidth="280">
+                                <image>
+                                    <Image url="@images/home1.png" />
+                                </image>
+                            </ImageView>
+                            <VBox alignment="CENTER" spacing="5">
+                                <Label styleClass="room-title" text="Premium Single" />
+                                <Label styleClass="room-description" text="Ocean View" />
+                                <Button styleClass="reserve-button" text="Reserve" onAction="#onReserveButtonClicked"/>
+                            </VBox>
+                        </VBox>
+                    </HBox>
+                </ScrollPane>
+            </VBox>
+
+            <!-- Double Bed Category -->
+            <VBox spacing="15">
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label styleClass="category-title" text="Double Bed Rooms" />
+                    <Line endX="200.0" startX="0.0" strokeWidth="2.0" style="-fx-stroke: #CCCCCC;" />
+                </HBox>
+                <ScrollPane hbarPolicy="AS_NEEDED" styleClass="category-scroll" vbarPolicy="AS_NEEDED">
+                    <HBox spacing="15">
+                        <!-- Card 1 -->
+                        <VBox styleClass="room-card material-card">
+                            <ImageView fitHeight="200" fitWidth="280">
+                                <image>
+                                    <Image url="@images/home1.png" />
+                                </image>
+                            </ImageView>
+                            <VBox alignment="CENTER" spacing="5">
+                                <Label styleClass="room-title" text="Classic Double" />
+                                <Label styleClass="room-description" text="City View" />
+                                <Button styleClass="reserve-button" text="Reserve" onAction="#onReserveButtonClicked"/>
+                            </VBox>
+                        </VBox>
+
+                        <!-- Card 2 -->
+                        <VBox styleClass="room-card material-card">
+                            <ImageView fitHeight="200" fitWidth="280">
+                                <image>
+                                    <Image url="@images/home1.png" />
+                                </image>
+                            </ImageView>
+                            <VBox alignment="CENTER" spacing="5">
+                                <Label styleClass="room-title" text="Deluxe Double" />
+                                <Label styleClass="room-description" text="Ocean View" />
+                                <Button styleClass="reserve-button" text="Reserve" onAction="#onReserveButtonClicked"/>
+                            </VBox>
+                        </VBox>
+
+                        <!-- Card 3 -->
+                        <VBox styleClass="room-card material-card">
+                            <ImageView fitHeight="200" fitWidth="280">
+                                <image>
+                                    <Image url="@images/home1.png" />
+                                </image>
+                            </ImageView>
+                            <VBox alignment="CENTER" spacing="5">
+                                <Label styleClass="room-title" text="Premium Double" />
+                                <Label styleClass="room-description" text="Panoramic View" />
+                                <Button styleClass="reserve-button" text="Reserve" onAction="#onReserveButtonClicked"/>
+                            </VBox>
+                        </VBox>
+                    </HBox>
+                </ScrollPane>
+            </VBox>
+
+            <!-- Suite Category -->
+            <VBox spacing="15">
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label styleClass="category-title" text="Suite Rooms" />
+                    <Line endX="200.0" startX="0.0" strokeWidth="2.0" style="-fx-stroke: #CCCCCC;" />
+                </HBox>
+                <ScrollPane hbarPolicy="AS_NEEDED" styleClass="category-scroll" vbarPolicy="AS_NEEDED">
+                    <HBox spacing="15">
+                        <!-- Card 1 -->
+                        <VBox styleClass="room-card material-card">
+                            <ImageView fitHeight="200" fitWidth="280">
+                                <image>
+                                    <Image url="@images/home1.png" />
+                                </image>
+                            </ImageView>
+                            <VBox alignment="CENTER" spacing="5">
+                                <Label styleClass="room-title" text="Junior Suite" />
+                                <Label styleClass="room-description" text="Ocean View" />
+                                <Button styleClass="reserve-button" text="Reserve" onAction="#onReserveButtonClicked"/>
+                            </VBox>
+                        </VBox>
+
+                        <!-- Card 2 -->
+                        <VBox styleClass="room-card material-card">
+                            <ImageView fitHeight="200" fitWidth="280">
+                                <image>
+                                    <Image url="@images/home1.png" />
+                                </image>
+                            </ImageView>
+                            <VBox alignment="CENTER" spacing="5">
+                                <Label styleClass="room-title" text="Executive Suite" />
+                                <Label styleClass="room-description" text="Panoramic View" />
+                                <Button styleClass="reserve-button" text="Reserve" onAction="#onReserveButtonClicked"/>
+                            </VBox>
+                        </VBox>
+
+                        <!-- Card 3 -->
+                        <VBox styleClass="room-card material-card">
+                            <ImageView fitHeight="200" fitWidth="280">
+                                <image>
+                                    <Image url="@images/home1.png" />
+                                </image>
+                            </ImageView>
+                            <VBox alignment="CENTER" spacing="5">
+                                <Label styleClass="room-title" text="Presidential Suite" />
+                                <Label styleClass="room-description" text="Luxury View" />
+                                <Button styleClass="reserve-button" text="Reserve" onAction="#onReserveButtonClicked"/>
+                            </VBox>
+                        </VBox>
+                    </HBox>
+                </ScrollPane>
+            </VBox>
+        </VBox>
+    </ScrollPane>
+</AnchorPane>

@@ -304,3 +304,407 @@
     -fx-background-radius : 30px 30px 30px 30px;
     -fx-border-radius : 30px 30px 30px 30px;
 }
+
+.label {
+    -fx-font-family: Arial, sans-serif;
+}
+
+.button {
+    -fx-background-color: #0078d7;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-padding: 5px 10px;
+}
+
+.button:hover {
+    -fx-background-color: #005bb5;
+}
+/* General styles for the AnchorPane and VBox */
+.root {
+    -fx-background-color: #f4f4f4;
+}
+
+/* Room Card Style */
+.room-card {
+    -fx-border-color: #f0f0f0;
+    -fx-border-radius: 8px;
+    -fx-padding: 20px;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0.0, 0, 5);
+    -fx-alignment: center;
+}
+
+/* Image Style */
+.room-image {
+    -fx-border-radius: 8px;
+    -fx-background-color: #e0e0e0; /* Placeholder color if image is not loaded */
+}
+
+/* Room Title */
+.room-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Room Description */
+.room-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #777777;
+}
+
+
+
+/* View Details Button */
+.room-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 3, 0.0, 0, 3);
+}
+
+/* Search Box */
+.text-field {
+    -fx-background-color: #f4f4f4;
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+    -fx-padding: 10px;
+}
+
+.main-title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.category-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.room-card {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+    -fx-background-radius: 8;
+}
+
+.room-details {
+    -fx-padding: 10;
+}
+
+.room-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.room-description {
+    -fx-text-fill: #666666;
+}
+
+
+.view-button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-padding: 8 16;
+    -fx-background-radius: 4;
+}
+
+.transparent-scroll {
+    -fx-background-color: transparent;
+}
+
+.transparent-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.main-title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0;
+}
+
+.category-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 5 0;
+}
+
+.room-card {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+    -fx-background-radius: 8;
+}
+
+.room-details {
+    -fx-padding: 10;
+    -fx-spacing: 5;
+}
+
+.room-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.room-description {
+    -fx-text-fill: #666666;
+}
+
+
+
+.view-button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-padding: 8 16;
+    -fx-background-radius: 4;
+}
+
+.transparent-scroll {
+    -fx-background-color: transparent;
+    -fx-fit-to-height: true;
+}
+
+.transparent-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.transparent-scroll .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.transparent-scroll .scroll-bar:horizontal .thumb {
+    -fx-background-color: #888888;
+    -fx-background-radius: 4;
+}
+.main-scroll {
+    -fx-background-color: white;
+}
+
+.main-scroll .viewport {
+    -fx-background-color: white;
+}
+
+.main-title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 20 0;
+}
+
+.category-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0;
+}
+
+.room-card {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+    -fx-background-radius: 8;
+    -fx-padding: 0 0 15 0;
+    -fx-pref-width: 280;
+    -fx-alignment: center;
+    -fx-spacing: 10;
+}
+
+.room-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.room-description {
+    -fx-text-fill: #666666;
+}
+
+
+
+.view-button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-padding: 8 24;
+    -fx-background-radius: 4;
+}
+
+.view-button:hover {
+    -fx-background-color: #333333;
+}
+.main-scroll {
+    -fx-background-color: transparent;
+    -fx-padding: 20;
+}
+
+.main-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.main-scroll .scroll-bar:horizontal {
+    -fx-background-color: derive(#f0f0f0, 20%);
+    -fx-background-radius: 3;
+}
+
+.main-scroll .scroll-bar:horizontal .thumb {
+    -fx-background-color: derive(#808080, 50%);
+    -fx-background-radius: 3;
+}
+
+.main-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+    -fx-padding: 0 0 20 0;
+}
+
+.category-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495E;
+    -fx-padding: 15 0;
+}
+
+.room-card {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 15, 0, 0, 3);
+    -fx-background-radius: 12;
+    -fx-padding: 0 0 15 0;
+    -fx-pref-width: 280;
+    -fx-alignment: center;
+    -fx-spacing: 8;
+    -fx-border-radius: 12;
+    -fx-border-color: transparent;
+}
+
+.room-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 20, 0, 0, 5);
+    -fx-border-color: #3498DB;
+    -fx-border-width: 2;
+}
+
+.room-card ImageView {
+    -fx-background-radius: 12 12 0 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.room-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+.room-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #7F8C8D;
+}
+
+
+.view-button {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+    -fx-padding: 10 30;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.view-button:hover {
+    -fx-background-color: #2980B9;
+}
+
+.view-button:pressed {
+    -fx-background-color: #2472A4;
+}
+/* General Styles */
+.root {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-background-color: #f5f5f5;
+}
+
+.main-scroll {
+    -fx-background-color: transparent;
+}
+
+.main-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-alignment: center;
+}
+
+.category-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Room Cards */
+.room-card {
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-padding: 10;
+    -fx-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    -fx-min-width: 280px;
+    -fx-max-width: 280px;
+}
+
+.room-card:hover {
+    -fx-background-color: #ecf0f1;
+}
+
+.room-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-alignment: center;
+    -fx-padding: 5 0;
+}
+
+.room-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #7f8c8d;
+    -fx-alignment: center;
+    -fx-padding: 0 0 5 0;
+}
+
+.room-price {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e74c3c;
+    -fx-alignment: center;
+    -fx-padding: 5 0;
+}
+
+.view-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 15;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.view-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Layout Styles */
+.VBox {
+    -fx-padding: 10 20;
+    -fx-spacing: 20;
+}
+
+.HBox {
+    -fx-spacing: 20;
+}
+
+.ScrollPane {
+    -fx-background-color: transparent;
+}
+
+.AnchorPane {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 10;
+}
+
+.padding {
+    -fx-padding: 20;
+}
