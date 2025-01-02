@@ -4,6 +4,9 @@ import com.example.Models.Room;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.Updates;
+
 import org.bson.Document;
 
 import java.util.ArrayList;
@@ -85,5 +88,58 @@ public class RoomsDAO {
         }
     }
 
+
+
+    public void updateRoom(int index, Room updatedRoom) {
+        try {
+            // Fetch the current document by the unique identifier or index logic
+            MongoCursor<Document> cursor = collection.find().skip(index).limit(1).iterator();
+            if (cursor.hasNext()) {
+                Document originalDocument = cursor.next();
+                // Build the update document
+                Document update = new Document("$set", new Document()
+                        .append("room_num", updatedRoom.getRoomNum())
+                        .append("price", updatedRoom.getPrice())
+                        .append("type", updatedRoom.getType())
+                        .append("category", updatedRoom.getCategory())
+                        .append("amenities", updatedRoom.getAmenities())
+                        .append("status", updatedRoom.getStatus())
+                );
+    
+                // Update the document in the collection
+                collection.updateOne(originalDocument, update);
+                System.out.println("Room updated successfully at index: " + index);
+            } else {
+                System.err.println("No document found at index: " + index);
+            }
+        } catch (Exception e) {
+            System.err.println("Error updating room at index: " + index + ", " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    
+    public void deleteRoom(int index) {
+        try {
+            // Use a cursor to find the document at the given index
+            MongoCursor<Document> cursor = collection.find().skip(index).limit(1).iterator();
+            if (cursor.hasNext()) {
+                Document documentToDelete = cursor.next();
+    
+                // Delete the document
+                long deletedCount = collection.deleteOne(documentToDelete).getDeletedCount();
+                if (deletedCount > 0) {
+                    System.out.println("Room at index " + index + " deleted successfully.");
+                } else {
+                    System.err.println("Failed to delete room at index " + index + ".");
+                }
+            } else {
+                System.err.println("No room found at index: " + index);
+            }
+        } catch (Exception e) {
+            System.err.println("Error deleting room at index " + index + ": " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    
 
 }

@@ -497,7 +497,3 @@
     -fx-background-color: #c0392b; /* Darker red on hover */
 }
 
-HBox {
-    -fx-padding: 10px;
-    -fx-alignment: center-right;
-}
